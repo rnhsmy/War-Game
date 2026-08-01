@@ -1,6 +1,6 @@
 /**
  * Students can modify and extend to implement their game.
- * Add your name as a modifier and the date!
+ * Ryan Massey
  */
 package ca.sheridancollege.project;
 
