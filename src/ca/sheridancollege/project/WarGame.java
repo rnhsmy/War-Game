@@ -19,7 +19,7 @@ import java.util.ArrayList;
  *  - The game ends when one player holds every card, or a round limit is
  *    hit (some shuffles of War can go on for a very long time).
  *
- * @author Ryan Massey
+ * @author Ryan, 2026
  */
 public class WarGame extends Game
 {
@@ -118,6 +118,11 @@ public class WarGame extends Game
         }
 
         resolveComparison(p1, p2, c1, c2, pot);
+
+        // Printed after the round (and any wars inside it) is fully
+        // resolved, so the counts shown are the up-to-date totals.
+        System.out.println("Round " + roundNumber + ": " + p1.getPlayerID() + ": " + p1.numCards()
+                + " cards - " + p2.getPlayerID() + ": " + p2.numCards() + " cards");
     }
 
     /**
@@ -155,10 +160,8 @@ public class WarGame extends Game
      */
     private void war(WarPlayer p1, WarPlayer p2, ArrayList<Card> pot)
     {
-        if (verbose)
-        {
-            System.out.println("  -> WAR!");
-        }
+        System.out.println("  -> WAR! (" + p1.getPlayerID() + " and " + p2.getPlayerID()
+                + " each stake cards)");
 
         stake(p1, pot, 3);
         stake(p2, pot, 3);
