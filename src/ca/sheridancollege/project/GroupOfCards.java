@@ -16,7 +16,7 @@ import java.util.Collections;
  * A concrete class that represents any grouping of cards for a Game.
  * HINT, you might want to subclass this more than once.
  * The group of cards has a maximum size attribute which is flexible for reuse.
- * @author dancye
+ * Ryan, 2026
  */
 public class GroupOfCards 
 {
