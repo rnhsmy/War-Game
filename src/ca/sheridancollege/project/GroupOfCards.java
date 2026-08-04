@@ -1,6 +1,4 @@
 /**
- * Students can modify and extend to implement their game.
- * Add your name as a modifier and the date!
  *
  * Modified by Ryan, 2026: initialized the cards list in the constructor
  * (it was previously left null, which would cause a NullPointerException
